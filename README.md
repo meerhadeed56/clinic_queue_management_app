@@ -1,17 +1,18 @@
 # clinic_queue_management_app
 
-A new Flutter project.
+Title: Clinic Queue Management
 
-## Getting Started
+Description:
+A cross-platform Flutter application built to streamline patient check-ins, monitor live wait times, and manage doctor availability. Designed with a focus on real-time data handling and clean architecture, this app provides separate, optimized interfaces for both clinic staff and waiting patients.
 
-This project is a starting point for a Flutter application.
+Key Technical Features:
 
-A few resources to get you started if this is your first Flutter project:
+Real-Time Data Streams: Utilizes Dart Streams and WebSockets (or Firebase Realtime Database/Firestore) to provide live updates to the patient queue without requiring manual refreshes.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Role-Based Access Control (RBAC): Distinct routing and UI flows for 'Receptionist/Admin' (managing the queue, adding walk-ins) and 'Patient' (viewing personal wait time and queue position).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+State Management: Implemented [Insert State Management, e.g., Bloc / Riverpod] to efficiently rebuild only the necessary UI components when the queue state changes.
+
+Local Notifications: Integrates on-device notifications to alert patients when their turn is approaching, demonstrating interaction with native device features.
+
+Responsive UI: Fluid layouts optimized for a tablet at the receptionist desk and mobile devices for patients.
